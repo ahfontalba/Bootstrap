@@ -1,0 +1,161 @@
+.quick-links, .quick-tab-links {
+  max-width: 100%;
+  padding: 0 $default-padding 0 $default-padding;
+  background-color: $paper-white;
+
+  .container {
+    display: flex;
+
+    .product-links {
+
+      .nav-pills > li a {
+        text-transform: uppercase;
+        padding: 10px 20px 6px 20px;
+        border-bottom: 4px solid transparent;
+        border-radius: 0;
+        color: $dark-grey;
+        background-color: transparent;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline;
+    }
+
+    a {
+      /* font size fallback for vw unit (not yet supported by polyfiller)*/
+      font-size: 16px;
+      font-size: 1.475vw;
+      color: $dark-grey;
+      cursor: pointer;
+      line-height: 26px;
+      padding: 0 25px 0 25px;
+    }
+  }
+
+  .chevron-down svg {
+    height: 14px;
+    width: 14px;
+    color: $dark-grey;
+  }
+}
+
+.quicklinks-toggle {
+  display: none;
+  height: 100%;
+  align-self: flex-start;
+  margin: 0;
+}
+
+.quicklinks-toggle.open {
+  transform: rotate(180deg);
+  align-self: flex-end;
+}
+
+.stickytop {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .quick-links, .quick-tab-links {
+    .container {
+      a {
+        font-size: 16px
+      }
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .quick-links, .quick-tab-links {
+    .container {
+      .product-links {
+        .nav-pills > li.active > a,
+        .nav-pills > li.active > a:focus,
+        .nav-pills > li.active > a:hover,
+        .nav-pills > li a:hover {
+          border-bottom: 4px solid $aqua;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .quick-links, .quick-tab-links {
+    padding: 0 10px;
+
+    .main {
+      display: flex;
+    }
+
+    .container {
+
+      li {
+        display: none;
+        margin: 10px 0;
+      }
+
+      .product-links {
+        align-self: center;
+
+        .nav-pills {
+          display: flex;
+          flex-direction: column;
+
+          > li a {
+            padding: 0 4px;
+            border-bottom: 0;
+          }
+
+          li.active {
+            display: inline;
+
+            a {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      a {
+        font-size: 16px;
+      }
+    }
+
+    .container.open {
+      li {
+        display: inline;
+      }
+    }
+  }
+
+  .quick-links:not(.stickytop),
+  .quick-tab-links:not(.stickytop) {
+    li:first-child {
+      display: block;
+    }
+  }
+
+  .stickytop {
+    .quicklinks-toggle {
+      display: block;
+    }
+  }
+
+  .quicklinks-toggle {
+    height: 46px;
+    padding: 0 15px;
+    display: inline;
+  }
+}

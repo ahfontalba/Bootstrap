@@ -1,0 +1,223 @@
+$default-padding: 20px;
+
+html, body {
+  font-family: $benton-rg;
+  font-size: 13px;
+  background-color: #f3f3f3;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* Make chrome & firefox fonts look better */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-break: keep-all;
+  background-color: $white;
+  min-width: 310px;
+}
+
+.main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+  position: relative;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-item {
+  flex: 1 1 auto;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Default fonts and sizes */
+
+h1, h2, h3, h4, h5 {
+  font-family: $benton-lt;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 52px;
+  padding-bottom: 8px;
+  color: $black;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 40px;
+  padding-bottom: 24px;
+  color: $aqua;
+}
+
+h3 {
+  font-size: 30px;
+  color: $aqua;
+}
+
+h4 {
+  font-size: 25px;
+  color: $aqua;
+}
+
+h4 {
+  font-size: 20px;
+  color: $aqua;
+}
+
+p, a {
+  font-family: $benton-rg;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  color: $black;
+}
+
+a {
+  word-wrap: break-word;
+  color: $dark-aqua;
+}
+
+p.large {
+  font-family: $benton-lt;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+div.large {
+  h1, h2, h3, h4, h5, p, a, ol, ul, li {
+    font-family: $benton-lt;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+p.medium {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+div.medium {
+  h1, h2, h3, h4, h5, p, a, ol, ul, li {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+p.small {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+div.small {
+  h1, h2, h3, h4, h5, p, a, ol, ul, li {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+p.accent {
+  font-family: $benton-lt;
+  color: $purple;
+}
+
+p.bold {
+  font-family: $benton-md;
+}
+
+ol, ul {
+  list-style: square;
+  padding-left: 20px;
+  font-size: 16px;
+  color: $black;
+}
+
+ul li p {
+  padding: 0;
+}
+
+button,
+.btn-primary,
+a.button-link {
+  padding: 0 15px;
+  border-radius: 6px;
+  color: $white;
+  background: $dark-aqua;
+  font-size: 16px;
+  line-height: 40px; 
+  text-align: center;
+  margin-top: 40px;
+  border: solid 1px transparent;
+}
+
+a.button-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+button,
+.btn-primary,
+a.button-link {
+
+  &:disabled {
+    background: $paper-white;
+    color: $grey;
+    border: solid 1px $light-grey;
+  }
+
+  &.light {
+    background: $white;
+    color: $aqua;
+  }
+
+  &.dark {
+    background-color: $dark-aqua;
+    padding: 10px;
+  }
+}
+
+.requires-login, .force-hide {
+  display: none !important;
+}
+
+hr {
+  border: 1px solid $paper-white;
+}
+
+@media (max-width: 900px) and (min-width: 768px) {
+  button,
+  .btn-primary,
+  a.button-link {
+    padding: 0 10px;
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 42px;
+    line-height: 46px;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 40px;
+    padding-bottom: 24px;
+    color: $aqua;
+  }
+}

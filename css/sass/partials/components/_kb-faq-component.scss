@@ -1,0 +1,27 @@
+.kb-faq-modal {
+
+  .accordion {
+    background-color: $white;
+
+    .accordion-body {
+      width: 100%;
+    }
+
+    h2 {
+      color: $black;
+      padding: 0 0 $default-padding 0;
+    }
+
+    .item-heading {
+      a {
+        padding: 0;
+        font-family: $benton-lt;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 1px;
+  }
+}

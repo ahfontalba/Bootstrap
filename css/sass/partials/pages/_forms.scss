@@ -1,0 +1,536 @@
+label, input, textarea, select, dt, dl, dd, .control-label, .form-control {
+  font-family: $benton-rg;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+  resize: none;
+}
+
+label {
+  padding: 10px 10px 10px 0;
+  display: inline-block;
+}
+
+input.ui-select-search {
+  width: 100% !important;
+}
+
+input, textarea, .form-control, .form-control-alert, .ui-select-container {
+  width: calc(50% - 4px);
+  float: right;
+}
+
+input, textarea, .form-control, .ui-select-container {
+  color: $black;
+  border: solid 1px $grey;
+  display: inline-block;
+  border-radius: 6px;
+  height: 40px;
+  padding: 6px 12px;
+}
+
+input[disabled] {
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.checkbox, .radio {
+
+  label {
+    display: flex;
+    padding-left: 0;
+    padding-right: 25px;
+    max-width: 100% !important;
+    width: 100%;
+  }
+}
+
+.checkbox-inline {
+  display: flex;
+  position: static !important;
+  input[type=checkbox] {
+    position: static;
+    transform: scale(1.3);
+    float: left;
+    margin-right: 2px;
+  }
+}
+
+input[type=checkbox],
+input[type=checkbox][disabled],
+input[type=radio],
+input[type=radio][disabled] {
+  display: inline-block;
+  height: 13px;
+  padding: 10px 0;
+  position: absolute;
+  margin-top: 4px;
+  font-size: 16px;
+  font-weight: normal;
+  width: 20px;
+  right: 15px;
+}
+
+.checkbox input[type=checkbox],
+.checkbox input[type=checkbox][disabled],
+.radio input[type=radio],
+.radio input[type=radio][disabled] {
+  margin-left: 10px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.date-picker {
+  margin-bottom: 15px;
+
+  label {
+    width: calc(50% + 4px);
+  }
+
+  span {
+    width: calc(50% - 4px);
+  }
+
+  button {
+    float: right;
+    height: 40px;
+    border: solid 1px $grey;
+  }
+
+  input.form-control {
+    width: calc(100% - 44px);
+    border-radius: 6px 0 0 6px;
+    border-right: 0;
+  }
+
+}
+
+.required:after {
+  content: " *";
+}
+
+.error-message,
+.message {
+  font-family: $benton-bk;
+  font-size: 16px;
+  padding: 5px 0;
+  color: $error-red;
+  padding-left: calc(50% + 4px);
+}
+
+.error {
+  padding: $default-padding;
+
+  h2 {
+    color: inherit;
+  }
+}
+
+.error-message {
+  padding-left: 0;
+}
+
+dl {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0
+}
+
+dt {
+  width: 45%;
+  float: left;
+  padding: 10px 0;
+  margin: 0
+}
+
+dd {
+  padding: 10px 50px 10px 0;
+  margin-left: 45%;
+
+  label {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.width-full {
+  width: 100%;
+}
+
+.toolTip {
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  position: relative;
+  cursor: pointer;
+  background-color: $dark-aqua;
+  border-radius: 50%;
+  align-self: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 13px;
+  line-height: 18px;
+
+  i {
+    color: $white;
+  }
+}
+
+.undecorated-list {
+  list-style-type: none;
+}
+
+.entitlement-container ul {
+  margin-bottom: 10px;
+}
+
+.has-error {
+  color: $error-red;
+}
+
+label.entitlements-label.control-label {
+  width: 100%;
+}
+
+.services-entitlements-disabled {
+  color: $light-grey;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  label {
+    max-width: 50%;
+  }
+
+  div {
+    flex: 1 1 auto;
+  }
+
+  .inline-select {
+    width: calc(50% - 4px);
+    float: right;
+    display: flex;
+
+    select {
+      width: 100%;
+    }
+  }
+
+}
+
+.form {
+  padding: $default-padding;
+
+  .main-form {
+    margin: 20px auto;
+
+    .checkboxArea {
+      width: 100%;
+      max-height: 400px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      border: 1px solid #cacbcc;
+      border-radius: 4px;
+      transition: border-color, ease-out .2s;
+
+      .checkbox input[type=checkbox], .radio input[type=radio] {
+        margin-left: 0;
+      }
+
+      .checkbox, .radio {
+        padding: 0 15px;
+      }
+
+      .checkbox:nth-child(2n) {
+        background-color: rgba(234, 235, 235, 0.5);
+      }
+
+    }
+
+    .document-link {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+
+      label {
+        padding-right: 30px;
+      }
+    }
+  }
+
+  .form-title {
+    font-size: 40px;
+    border-bottom: 2px solid $aqua;
+  }
+
+  .note {
+    display: inline-block;
+    padding: 0 0 10px 0;
+  }
+
+  .form-intro-content {
+    margin: 20px auto;
+  }
+
+  hr {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    border-top: 1px solid $grey;
+  }
+
+  .glyphicon-globe {
+    font-size: 2.1em;
+    top: 5px;
+  }
+
+  .t-and-c-icon {
+    svg {
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin: 8px 8px 0 0;
+    }
+  }
+
+  .language-select {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+
+    label {
+      width: 80%;
+      text-align: end;
+      padding: 0 10px;
+      .language-selection {
+        float: right;
+      }
+    }
+
+    select {
+      width: 20%;
+    }
+  }
+
+  div.toolTip {
+    width: initial;
+  }
+
+  a .t-and-c-icon {
+    margin-top: 13px;
+  }
+
+  .email-link {
+    color: $dark-aqua;
+    text-decoration: none;
+  }
+
+  .errors {
+    font-family: BentonSans-Bk, Arial, Helvetica, Sans-Serif;
+    font-size: 16px;
+    color: $error-red;
+  }
+
+  .alert-success, .alert-danger {
+    margin-top: $default-padding;
+
+    p {
+      font-size: 18px;
+      margin-bottom: 0;
+      text-align: center;
+      padding: 30px;
+    }
+  }
+
+  .backend-errors {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    color: $error-red;
+    border: 2px solid $error-red;
+    border-radius: 3px;
+    margin-bottom: 15px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+
+  .panel-body {
+    overflow: hidden;
+  }
+
+  .logout-button {
+    text-align: center;
+  }
+
+  a.button-link, button {
+    margin: 0;
+  }
+
+  .custom-multi-checkbox{
+    a.button-link, button {
+      line-height: 40px;
+    }
+  }
+}
+
+.form-message {
+  padding: $default-padding;
+}
+
+.hidden-form-message{
+  padding: $default-padding 0;
+}
+
+.service-entitlement-inline-container {
+  display: flex;
+  flex-direction: column;
+
+  span, label {
+    font-size: 14px;
+  }
+
+  .input-group>form {
+    display: flex;
+    flex-direction: row;
+    max-width: 300px;
+
+    button, input {
+      margin-right: 10px;
+    }
+  }
+
+  .list-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 100px;
+    max-width: 160px;
+    margin: 6px 0;
+    overflow-y: auto;
+
+    .list-item {
+      max-width: 120px;
+
+      &:not(:last-child){
+
+        margin-bottom: 2px;
+      }
+
+      .glyphicon-trash {
+        float: right;
+        padding-top: 5px;
+        cursor: pointer;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.entitlements-container {
+  >.entitlements {
+    padding-left: 0;
+    >li {
+      margin-bottom: 20px;
+
+      > ul {
+        margin-left: 7px;
+        padding-left: 14px;
+        border-left: 1px solid $grey;
+      }
+      > .entitlement-list-item {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .entitlement-list-item {
+    margin: 10px 0;
+    font-size: 14px;
+    
+    &.entitlement-list-item-disabled {
+      color: $grey;
+    }
+  }
+}
+
+.entitlements-label {
+  padding-bottom: 20px;
+}
+
+.form-control-alert {
+  width: calc(50% - 4px);
+  float: right;
+  margin: 10px 0 0 0;
+}
+
+.call-to-action-container {
+  text-align: center;
+  margin-bottom: 30px;
+
+  a.button-link {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  input, label, .date-picker label, .form-control, .ui-select-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .checkbox input[type=checkbox], .radio input[type=radio] {
+    margin-left: 0;
+    float: right;
+  }
+
+  .date-picker {
+    span {
+      width: 100%;
+    }
+  }
+
+  .form {
+
+    .main-form {
+
+      .message {
+        padding-left: 0;
+      }
+    }
+
+    .language-select {
+
+      label {
+        width: 55%;
+      }
+
+      select {
+        width: 45%;
+      }
+    }
+
+    .toolTip {
+      display: none;
+    }
+  }
+
+  .form-group {
+    flex-wrap: wrap;
+
+    label {
+      max-width: 100%;
+    }
+
+    .inline-select {
+      width: 100%;
+    }
+  }
+}

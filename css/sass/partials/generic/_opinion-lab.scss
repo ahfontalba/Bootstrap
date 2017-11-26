@@ -1,0 +1,72 @@
+.bottom-bar, .bottom-bar-always-visible {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+
+  #oo_tab {
+    display: none !important;
+  }
+
+  .bottom-bar .button.light, .bottom-bar-always-visible .button.light {
+    background: $feedback-blue;
+  }
+
+  .bottom-bar a.button, .bottom-bar-always-visible a.button {
+    color: $white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    border: 1px solid $white;
+    font: normal 700 13px BentonSans-Md, Arial, Helvetica, Sans-Serif;
+  }
+
+  .bottom-bar {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .button.feedback:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+  }
+
+  .bottom-bar .button + .button, .bottom-bar-always-visible .button + .button {
+    margin-left: 5px;
+  }
+
+  .bottom-bar .button.light, .bottom-bar-always-visible .button.light {
+    background: $feedback-blue;
+  }
+
+  .bottom-bar a.button, .bottom-bar-always-visible a.button {
+    color: $white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    border: 1px solid $white;
+    font: normal 700 13px BentonSans-Md, Arial, Helvetica, Sans-Serif;
+  }
+
+  .bottom-bar .button.feedback, .bottom-bar-always-visible .button.feedback {
+    background: $feedback-green;
+  }
+
+  .bottom-bar .button + .button, .bottom-bar-always-visible .button + .button {
+    margin-left: 5px;
+  }
+
+  .bottom-bar, .bottom-bar-always-visible {
+    display: block;
+    z-index: 30;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: $feedback-blue;
+    background: rgba(0, 54, 118, .85);
+    width: 100%;
+    min-width: 320px;
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+

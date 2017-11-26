@@ -1,0 +1,58 @@
+.icon {
+  background-image: url("../images/icon-generic.svg");
+  background-size: 45px;
+  background-repeat: no-repeat;
+  background-position: center left;
+  fill: red;
+
+  &.web {
+    background-image: url("../images/icon-page-gnw.svg");
+  }
+
+  &.doc, &.docx {
+    background-image: url("../images/icon-doc.svg");
+  }
+
+  &.pdf {
+    background-image: url("../images/icon-pdf.svg");
+  }
+
+  &.zip {
+    background-image: url("../images/icon-zip.svg");
+  }
+
+  &.ppt, &.pptx {
+    background-image: url("../images/icon-ppt.svg");
+  }
+
+  &.png {
+    background-image: url("../images/icon-png.svg");
+  }
+
+  &.jpg, &.jpeg {
+    background-image: url("../images/icon-jpg.svg");
+  }
+
+  &.xls, &.xlsx {
+    background-image: url("../images/icon-xls.svg");
+  }
+
+  &.exe {
+    background-image: url("../images/icon-exe.svg");
+  }
+
+  &.page {
+    background-image: url("../images/icon-generic.svg");
+  }
+
+  &.multi {
+    background-image: url("../images/icon-multiple.svg");
+  }
+
+  &.icon-plus {
+    @include icon-mixin("icon-plus")
+  }
+  &.icon-minus {
+    @include icon-mixin("icon-minus")
+  }
+}

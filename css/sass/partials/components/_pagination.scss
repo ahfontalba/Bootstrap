@@ -1,0 +1,23 @@
+.pagination {
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  justify-content: center;
+
+  a {
+    display: flex;
+    margin: 0 2px;
+    background-color: $white;
+    border: solid 1px $paper-white;
+    min-width: 25px;
+    min-height: 25px;
+    justify-content: center;
+  }
+
+  a:hover, a:active, a:focus, .active {
+    background-color: $dark-aqua;
+    border-color: $dark-aqua;
+    color: $white;
+  }
+}

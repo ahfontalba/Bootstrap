@@ -1,0 +1,180 @@
+.steps {
+
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .arrow {
+    flex: 1 1 auto;
+    padding: 20px;
+    background-color: $paper-white;
+  }
+
+  .arrow-right {
+    width: 0;
+    height: 0;
+    border-left: 100px solid $paper-white;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+  }
+}
+
+.who-are-you {
+
+  form {
+    width: 100%;
+  }
+
+  ul {
+    margin: 15px;
+    padding: 0;
+    color: $white;
+    list-style: none;
+    li:before {
+      content: "\e258";
+      color: white;
+      font-family: 'Glyphicons Halflings';
+      font-style: normal;
+      font-weight: normal;
+      -webkit-font-smoothing: antialiased;
+      font-size: 10px;
+    }
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 15px 0 15px 0;
+    border-top: solid 1px $paper-white;
+
+    button {
+      line-height: 20px;
+      padding: 10px;
+      width: 100%;
+      margin: 0;
+    }
+
+    select {
+      padding-right: 40px;
+      background: none;
+      border: none;
+      box-shadow: none;
+      height: 34px;
+      width: 100%;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+    }
+
+    select::-ms-expand {
+      display: none;
+    }
+
+    select:active, select:focus {
+      padding: 0 5px 0 5px;
+      border: solid 1px $grey;
+      outline: -webkit-focus-ring-color auto;
+      outline-color: -webkit-focus-ring-color;
+      outline-style: auto;
+      outline-width: 5px;
+    }
+
+    .select-container {
+      position: relative;
+    }
+
+    .select-chevron-container {
+      position: absolute;
+      right: 8px;
+      pointer-events: none;
+      top: 6px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        fill: currentColor;
+      }
+    }
+
+    .item {
+      flex: 1 1 auto;
+      width: 50%;
+    }
+
+    .cta {
+      cursor: pointer;
+      text-align: right;
+    }
+
+    a.regions {
+      font-size: 16px;
+      text-align: center;
+      color: $grey;
+      width: 100%;
+    }
+  }
+}
+
+.hero-cta {
+  flex: 1 1 auto;
+  align-self: flex-end;
+  color: $white;
+
+  .who-are-you {
+    background: rgba(34, 34, 34, 0.5);
+    float: right;
+    min-width: 300px;
+    max-width: 340px;
+    border-radius: 6px;
+    text-align: left;
+    padding: 0 20px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .row {
+    padding: 13px 0 13px 0;
+    border: none;
+
+    label, select {
+      cursor: pointer;
+    }
+
+    option {
+      background: $black;
+    }
+
+    &.audience-submit,
+    &.footnote,
+    label {
+      display: none;
+    }
+  }
+
+  .row:first-child {
+    border-bottom: solid 1px $grey;
+  }
+}
+
+@media (max-width: 767px) {
+  .steps {
+
+    .arrow {
+      padding: 15px;
+    }
+
+    .arrow-right {
+      display: none;
+    }
+  }
+
+  .hero-cta {
+    padding-top: $default-padding;
+
+    .who-are-you {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+}

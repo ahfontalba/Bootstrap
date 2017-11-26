@@ -1,0 +1,81 @@
+.tiles-scroll-down {
+
+  h2 {
+    width: 100%;
+  }
+
+  .tiles {
+
+    h3 {
+      font-size: 14px;
+      font-family: $benton-bd;
+      color: $dark-aqua;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .horizontal-rule {
+      border-color: $dark-aqua;
+    }
+  }
+
+  .tile {
+    width: 16.6%;
+    min-height: 100px;
+    border-color: $white;
+    background-size: 100% 200%;
+    background-image: linear-gradient(to bottom, $paper-white 50%, $aqua 50%);
+    transition: background-position 0.25s linear, color 0.25s linear;
+
+    .tile-container {
+      width: 100%;
+      position: relative;
+
+      a{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .tile-content {
+      height: 100%;
+    }
+  }
+
+  .tile:hover {
+    background-position: 0 -100%;
+
+    h3 {
+      color: $white;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .tiles-scroll-down {
+    .tiles {
+      .tile {
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .tiles-scroll-down {
+    .container h2 {
+      padding-left: $default-padding;
+    }
+
+    .tile {
+      width: 50%;
+      border-left: 20px solid $white;
+      border-top: 20px solid $white;
+    }
+  }
+}

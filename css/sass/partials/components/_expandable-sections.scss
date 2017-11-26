@@ -1,0 +1,72 @@
+.expandable-sections {
+  padding: $default-padding;
+  .panel {
+    margin: 20px 0 0 0;
+  }
+  .resources {
+    margin: 20px 0;
+    padding: 20px 0;
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    a {
+      color: $aqua;
+    }
+  }
+  .two-column {
+    padding: 10px;
+  }
+  p, a {
+    font-size: 14px;
+  }
+  .item {
+    margin: 1px 0px;
+    border: 1px solid $aqua;
+
+    .item-heading {
+      a {
+        color: $black;
+        background-color: $white;
+        font-size: 16px;
+        padding: 10px 15px;
+        display: block;
+        vertical-align: middle;
+        @include transition(background-color 200ms linear);
+        .indicator {
+          width: 40px;
+          height: 40px;
+          display: inline-block;
+          vertical-align: middle;
+          margin-right: 10px;
+          line-height: 16px;
+          &.indicator-small {
+            width: 15px;
+            height: 15px;
+          }
+          &.expand {
+            display: none;
+          }
+        }
+        &.collapsed {
+          color: $white;
+          background-color: $aqua;
+          .indicator.collapse {
+            display: none;
+          }
+          .indicator.expand {
+            display: inline-block;
+          }
+        }
+        &:hover {
+          text-decoration: none;
+        }
+
+      }
+    }
+  }
+  .icon {
+    width: 44px;
+    height: 48px;
+    margin-top: 5px;
+    display: block;
+  }
+}

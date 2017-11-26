@@ -1,0 +1,61 @@
+.modal-header {
+  display: flex;
+
+  .close {
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    color: $dark-aqua;
+    opacity: 1;
+  }
+
+  .close:hover, .close:active, .close:focus {
+    background-color: $paper-white;
+    outline: 0;
+  }
+}
+
+.modal-title {
+  flex-grow: 1;
+  font-family: $benton-lt;
+  font-size: 26px;
+  line-height: 30px;
+  color: $dark-aqua;
+}
+
+.modal-body {
+  p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.modal-dialog {
+  width: 90%;
+  max-width: 970px;
+}
+
+.modal-footer {
+  text-align: left;
+}
+
+.modal-cms-preview {
+  width: 100%;
+  padding: $default-padding;
+
+  p.cms-message {
+    font-family: $benton-bd;
+    color: $black;
+    text-align: center;
+  }
+}

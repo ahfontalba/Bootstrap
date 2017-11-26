@@ -1,0 +1,16 @@
+.bread-crumb {
+  padding: $default-padding;
+  padding-bottom: 0;
+  width: 100%;
+
+  .bc-link {
+    p, a {
+      color: $dark-aqua;
+      padding: 0;
+    }
+
+    span {
+      color: $black;
+    }
+  }
+}

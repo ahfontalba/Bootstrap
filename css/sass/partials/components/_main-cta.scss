@@ -1,0 +1,14 @@
+.main-cta {
+  max-width: 100%;
+  padding: $default-padding;
+  background-color: #006890;
+  background-image: linear-gradient(to right, #009bbb 50%, #006890 100%);
+
+  h1, h2, h3, h4, h5, ul li, p, a {
+    color: $white;
+  }
+
+  a.button-link {
+    color: $aqua;
+  }
+}

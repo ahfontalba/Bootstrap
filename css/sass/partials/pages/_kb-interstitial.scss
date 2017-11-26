@@ -1,0 +1,113 @@
+.kb-intro-modal{
+  .button-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    .button-link {
+      font-family: $benton-rg;
+      padding: 0 15px;
+      color: #ffffff;
+      font-size: 16px;
+      margin: 40px 20px 0 0;
+    }
+  }
+}
+
+.kb-interstitial-modal {
+
+  #carousel-component {
+    background-color: $white;
+  }
+
+  .modal-dialog {
+    width: 90%;
+    max-width: 970px;
+  }
+
+  .modal-body {
+    /* This solves a border radius bug on the modal */
+    padding: 1px;
+
+    p{
+      margin: 0;
+    }
+  }
+
+  .carousel-control {
+    color: $white;
+    height: 40px;
+    width: 40px;
+    top: calc(50% - 20px);
+
+    span {
+      line-height: 40px;
+    }
+
+    &.right {
+      left: calc(40% + 40px);
+    }
+  }
+
+  .carousel-caption {
+    overflow-y: scroll;
+
+    h3 {
+      color: $dark-aqua;
+    }
+  }
+
+  .item .carousel-caption {
+    padding-right: 10px;
+    max-width: 100%;
+    left: 55%;
+  }
+
+  .item img {
+    width: 40%;
+    margin-left: 40px;
+  }
+
+  .carousel-indicators {
+    width: calc(40% + 100px);
+  }
+}
+
+@media (max-width: 767px) {
+  .kb-interstitial-modal {
+
+    #carousel-component {
+      padding: $default-padding;
+    }
+
+    .item {
+      img {
+        display: none;
+      }
+
+      .carousel-caption {
+        position: static;
+        max-width: 100%;
+        max-height: 300px;
+        overflow: scroll;
+        padding-top: 0;
+        margin-bottom: 65px;
+      }
+    }
+
+    .carousel-indicators {
+      width: 100%;
+      z-index: 0;
+      bottom: 0;
+    }
+
+    .carousel-control {
+      top: calc(100% - 60px);
+
+      &.right {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}
