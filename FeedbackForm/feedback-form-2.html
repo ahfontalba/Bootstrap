@@ -1,0 +1,125 @@
+<!doctype html>
+<html ng-app="demo.accordian.openhandler">
+
+<head>
+    <!--< JS FILES >-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <!--<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.js"></script>-->
+    <script src="js/ui-bootstrap-tpls-0.12.1.js"></script>
+
+    <script src="js/FeedbackFormController.js"></script>
+
+    <!--< CSS FILES >-->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/gnw.css" rel="stylesheet">
+    <link href="css/feedback-form.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+<div ng-controller="FeedbackFormCtrl" class="feedback-outer-container">
+
+    <div id="1123" class="feedback feedback-main-container">
+        <div class="modal-header">
+            <p class="modal-title">{{strapline}}</p>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+        </div>
+
+        <div class="feedback-inner-container">
+
+            <!--<div class="general-close"></div>
+
+            <h3 style="text-align: center;">{{strapline}}</h3>-->
+
+            <h4>{{rating.header}}</h4>
+
+            <input type="hidden" id="rating_1123">
+
+            <div class="rating-group bar control-group question ">
+                <span class="rating-prefix"></span>
+
+                <ul class="choice-row">
+                    <li class="rating-choice">
+                        <input type="radio" id="rating_1123_1" name="radioGroup_1123" value="1"
+                               style="touch-action: manipulation;">
+                        <label id="label_1123_1" for="rating_1123_1" style="touch-action: manipulation;">
+                            <span class="rate-vbad" ng-click="ratingSelected(1)"></span>
+                        </label>
+                    </li>
+                    <li class="rating-choice">
+                        <input type="radio" id="rating_1123_2" name="radioGroup_1123" value="2"
+                               style="touch-action: manipulation;">
+                        <label id="label_1123_2" for="rating_1123_2" style="touch-action: manipulation;">
+                            <span class="rate-bad" ng-click="ratingSelected(2)"></span>
+                        </label>
+                    </li>
+                    <li class="rating-choice">
+                        <input type="radio" id="rating_1123_3" name="radioGroup_1123" value="3"
+                               style="touch-action: manipulation;">
+                        <label id="label_1123_3" for="rating_1123_3" style="touch-action: manipulation;">
+                            <span class="rate-ok" ng-click="ratingSelected(3)"></span>
+                        </label>
+                    </li>
+                    <li class="rating-choice">
+                        <input type="radio" id="rating_1123_4" name="radioGroup_1123" value="4"
+                               style="touch-action: manipulation;">
+                        <label id="label_1123_4" for="rating_1123_4" style="touch-action: manipulation;">
+                            <span class="rate-good" ng-click="ratingSelected(4)"></span>
+                        </label>
+                    </li>
+                    <li class="rating-choice">
+                        <input type="radio" id="rating_1123_5" name="radioGroup_1123" value="5"
+                               style="touch-action: manipulation;">
+                        <label id="label_1123_5" for="rating_1123_5" style="touch-action: manipulation;">
+                            <span class="rate-vgood" ng-click="ratingSelected(5)"></span>
+                        </label>
+                    </li>
+                </ul>
+                <span class="rating-suffix"></span>
+            </div>
+
+            <h4>{{groupHeader}}</h4>
+
+            <div class="row-gn feedback-accordion h-light">
+
+                <form id="feedback-tool-form" action="" method="post">
+                    <accordion>
+                        <accordion-group ng-repeat="group in groups" is-open="group.open">
+                            <accordion-heading>
+                                <span class={{group.icon}}></span><span class="title">{{group.title}}</span>
+                            </accordion-heading>
+                            <textarea name="{{group.name}}" placeholder="{{group.placeholder}}"></textarea>
+                        </accordion-group>
+                    </accordion>
+                </form>
+
+            </div>
+
+            <h4 class="email-header">{{email.header}}</h4>
+            <input type="text" name="email" class="email-input" placeholder="{{email.placeholder}}" maxlength="50">
+
+            <div id="legal-disclaimer">
+                <p>By providing your e-mail address, we may use it to respond to your feedback.
+                    For information about how we protect your privacy, please read our
+                    <a href='{{privacyUrl}}' target='_blank'>Privacy Statement</a>.</p>
+            </div>
+
+            <div class="pointer"></div>
+
+        </div>
+
+        <div class="feedback-btn-bar">
+            <input type="button" title="Give Feedback" name="feedback-form-submit" id="feedback-form-submit"
+                   class="btn btn-primary" value="Give Feedback">
+        </div>
+    </div>
+    <div class="feedback-launch-tab"><div class="feedback-tab-icon"></div><span>Feedback</span></div>
+</div>
+</body>
+
+</html>
+
+
+
+
