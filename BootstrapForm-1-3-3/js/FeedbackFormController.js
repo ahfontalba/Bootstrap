@@ -1,23 +1,22 @@
-var app = angular.module('feedbackForm', ['ui.bootstrap']);
+var app = angular.module('feedbackForm', ['ui.bootstrap', 'ngSanitize']);
 
 app.controller('FeedbackFormController', function ($scope) {
-
     $scope.oneAtATime = true;
 
     $scope.strapline = "GLOBAL NETWORK would gratefully welcome your feedback";
 
-    $scope.ratingHeader = "What is your opinion of this site?";
-
     $scope.rating = {
         header: "What is your opinion of this site?",
-        groupHeader1: "Can you tell us what we've done to upset you?",
-        groupHeader2: "Is there anything we can do to improve our customer user experience?",
-        groupHeader3: "Please tell us about your experience.",
-        groupHeader4: "Can you suggest an idea to enhace our user experience?",
-        groupHeader5: "Glad you like our site. Please tell us about your experience.",
+        feedbackHeaders: [
+            "Can you tell us what we've done to upset you?",
+            "Is there anything we can do to improve our customer user experience?",
+            "Please tell us about your experience.",
+            "Can you suggest an idea to enhace our user experience?",
+            "Glad you like our site. Please tell us about your experience.",
+        ],
     };
 
-    $scope.groupHeader = "Please tell us about your experience.";
+    $scope.groupHeader = $scope.rating.feedbackHeaders[2];
 
     $scope.groups = [
         {
@@ -52,11 +51,9 @@ app.controller('FeedbackFormController', function ($scope) {
         'For information about how we protect your privacy, please read our '+ 
         '<a href="https://www.americanexpress.com/us/content/legal-disclosures/online-privacy-statement.html" target="_blank">Privacy Statement</a>.'
 
-    $scope.privacyUrl = "https://www.americanexpress.com/us/content/legal-disclosures/online-privacy-statement.html";
-
     $scope.ratingSelected = function(ratingNum) {
         console.log("selected rating: " + ratingNum);
-
+        
         var open = false;
         for(x in $scope.groups) {
             if($scope.groups[x].open == true) {
@@ -68,17 +65,7 @@ app.controller('FeedbackFormController', function ($scope) {
             $scope.groups[0].open = true;
         }
 
-        if(ratingNum == 1) {
-            $scope.groupHeader = $scope.rating.groupHeader1;
-        } else if(ratingNum == 2) {
-            $scope.groupHeader = $scope.rating.groupHeader2;
-        } else if(ratingNum == 3) {
-            $scope.groupHeader = $scope.rating.groupHeader3;
-        } else if(ratingNum == 4) {
-            $scope.groupHeader = $scope.rating.groupHeader4;
-        } else if(ratingNum == 5) {
-            $scope.groupHeader = $scope.rating.groupHeader5;
-        }
+        $scope.groupHeader = $scope.rating.feedbackHeaders[ratingNum];
     };
 
 });

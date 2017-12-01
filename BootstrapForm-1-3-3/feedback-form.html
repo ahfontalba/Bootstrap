@@ -94,6 +94,8 @@
             <input type="text" name="email" class="email-input" placeholder="{{email.placeholder}}" maxlength="50">
 
             <div id="legal-disclaimer">
+                <p ng-bind-html="myHTML"></p>
+                <p ng-bind-html="disclaimer"></p>
                 <p>By providing your e-mail address, we may use it to respond to your feedback.
                     For information about how we protect your privacy, please read our
                     <a href='{{privacyUrl}}' target='_blank'>Privacy Statement</a>.</p>
