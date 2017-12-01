@@ -3,16 +3,16 @@ var app = angular.module('feedbackForm', ['ui.bootstrap', 'ngSanitize']);
 app.controller('FeedbackFormController', function ($scope) {
     $scope.oneAtATime = true;
 
-    $scope.strapline = 'GLOBAL NETWORK would gratefully welcome your feedback';
+    $scope.strapline = "GLOBAL NETWORK would gratefully welcome your feedback";
 
     $scope.rating = {
-        header: 'What is your opinion of this site?',
+        header: "What is your opinion of this site?",
         feedbackHeaders: [
-            'Can you tell us what we\'ve done to upset you?',
-            'Is there anything we can do to improve our customer user experience?',
-            'Please tell us about your experience.',
-            'Can you suggest an idea to enhace our user experience?',
-            'Glad you like our site. Please tell us about your experience.',
+            "Can you tell us what we've done to upset you?",
+            "Is there anything we can do to improve our customer user experience?",
+            "Please tell us about your experience.",
+            "Can you suggest an idea to enhace our user experience?",
+            "Glad you like our site. Please tell us about your experience.",
         ],
     };
 
@@ -20,42 +20,42 @@ app.controller('FeedbackFormController', function ($scope) {
 
     $scope.groups = [
         {
-            icon: 'icon ic-env',
-            title: 'General feedback',
-            name: 'feedback',
-            placeholder: 'e.g. Were you able to find relevant advice? Was the site easy to navigate?',
+            icon: "icon ic-env",
+            title: "General feedback",
+            name: "feedback",
+            placeholder: "e.g. Were you able to find relevant advice? Was the site easy to navigate?",
             open: false
         },
         {
-            icon: 'icon ic-bug',
-            title: 'Report a bug',
-            name: 'bug',
-            placeholder: 'e.g. What page of the experience did you notice this bug? Please provide detail.',
+            icon: "icon ic-bug",
+            title: "Report a bug",
+            name: "bug",
+            placeholder: "e.g. What page of the experience did you notice this bug? Please provide detail.",
             open: false
         },
         {
-            icon: 'icon ic-bulb',
-            title: 'Suggest an idea',
-            name: 'idea',
-            placeholder: 'e.g. What would make this website more useful for you?',
+            icon: "icon ic-bulb",
+            title: "Suggest an idea",
+            name: "idea",
+            placeholder: "e.g. What would make this website more useful for you?",
             open: false
         }
     ];
 
     $scope.email = {
-        header: 'If you wish us to get in touch, please provide us with an email address where we can reach you.',
-        placeholder: 'Enter e-mail address here (optional)'
+        header: "If you wish us to get in touch, please provide us with an email address where we can reach you.",
+        placeholder: "Enter e-mail address here (optional)"
     };
 
     $scope.disclaimer = 'By providing your e-mail address, we may use it to respond to your feedback. ' +
         'For information about how we protect your privacy, please read our '+
-        '<a href="https://www.americanexpress.com/us/content/legal-disclosures/online-privacy-statement.html" target="_blank">Privacy Statement</a>.';
+        '<a href="https://www.americanexpress.com/us/content/legal-disclosures/online-privacy-statement.html" target="_blank">Privacy Statement</a>.'
 
     $scope.ratingSelected = function(ratingNum) {
-        console.log('selected rating: ' + ratingNum);
+        console.log("selected rating: " + ratingNum);
 
         var open = false;
-        for(var x in $scope.groups) {
+        for(x in $scope.groups) {
             if($scope.groups[x].open == true) {
                 open = true;
             }
@@ -75,8 +75,8 @@ app.controller('FeedbackFormController', function ($scope) {
 
 // accordion bootstrap directive ----
 
-angular.module('ui.bootstrap', ['ui.bootstrap.tpls', 'ui.bootstrap.transition','ui.bootstrap.collapse','ui.bootstrap.accordion']);
-angular.module('ui.bootstrap.tpls', ['template/accordion/accordion-group.html','template/accordion/accordion.html']);
+angular.module("ui.bootstrap", ["ui.bootstrap.tpls", "ui.bootstrap.transition","ui.bootstrap.collapse","ui.bootstrap.accordion"]);
+angular.module("ui.bootstrap.tpls", ["template/accordion/accordion-group.html","template/accordion/accordion.html"]);
 angular.module('ui.bootstrap.transition', [])
 
     .factory('$transition', ['$q', '$timeout', '$rootScope', function($q, $timeout, $rootScope) {
@@ -86,7 +86,7 @@ angular.module('ui.bootstrap.transition', [])
             var deferred = $q.defer();
             var endEventName = $transition[options.animation ? 'animationEndEventName' : 'transitionEndEventName'];
 
-            var transitionEndHandler = function(/*event*/) {
+            var transitionEndHandler = function(event) {
                 $rootScope.$apply(function() {
                     element.unbind(endEventName, transitionEndHandler);
                     deferred.resolve(element);
@@ -203,7 +203,7 @@ angular.module('ui.bootstrap.collapse', ['ui.bootstrap.transition'])
                         // CSS transitions don't work with height: auto, so we have to manually change the height to a specific value
                         element.css({ height: element[0].scrollHeight + 'px' });
                         //trigger reflow so a browser realizes that height was updated from auto to a specific value
-                        //var x = element[0].offsetWidth;
+                        var x = element[0].offsetWidth;
 
                         element.removeClass('collapse in').addClass('collapsing');
 
@@ -255,7 +255,7 @@ angular.module('ui.bootstrap.accordion', ['ui.bootstrap.collapse'])
             var that = this;
             this.groups.push(groupScope);
 
-            groupScope.$on('$destroy', function (/*event*/) {
+            groupScope.$on('$destroy', function (event) {
                 that.removeGroup(groupScope);
             });
         };
@@ -320,7 +320,7 @@ angular.module('ui.bootstrap.accordion', ['ui.bootstrap.collapse'])
 
     // Use accordion-heading below an accordion-group to provide a heading containing HTML
     // <accordion-group>
-    //   <accordion-heading>Heading containing HTML - <img src='...'></accordion-heading>
+    //   <accordion-heading>Heading containing HTML - <img src="..."></accordion-heading>
     // </accordion-group>
     .directive('accordionHeading', function() {
         return {
@@ -340,8 +340,8 @@ angular.module('ui.bootstrap.accordion', ['ui.bootstrap.collapse'])
 
     // Use in the accordion-group template to indicate where you want the heading to be transcluded
     // You must provide the property on the accordion-group controller that will hold the transcluded element
-    // <div class='accordion-group'>
-    //   <div class='accordion-heading' ><a ... accordion-transclude='heading'>...</a></div>
+    // <div class="accordion-group">
+    //   <div class="accordion-heading" ><a ... accordion-transclude="heading">...</a></div>
     //   ...
     // </div>
     .directive('accordionTransclude', function() {
@@ -476,22 +476,25 @@ angular.module('ui.bootstrap.buttons', [])
     });
 
 
-angular.module('template/accordion/accordion-group.html', []).run(['$templateCache', function($templateCache) {
-    $templateCache.put('template/accordion/accordion-group.html',
-        '<div class="panel panel-default">\n' +
-        '  <div class="panel-heading">\n' +
-        '    <h4 class="panel-title">\n' +
-        '   <a href class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading"><span ng-class="{\'text-muted\': isDisabled}\">{{heading}}</span></a>\n' +
-        '    </h4>\n' +
-        '  </div>\n' +
-        '  <div class="panel-collapse" collapse="!isOpen\">\n' +
-        '	  <div class="panel-body" ng-transclude></div>\n' +
-        ' </div>\n' +
-        '</div>\n' +
-        '');
+angular.module("template/accordion/accordion-group.html", []).run(["$templateCache", function($templateCache) {
+    $templateCache.put("template/accordion/accordion-group.html",
+        "<div class=\"panel panel-default\">\n" +
+        "  <div class=\"panel-heading\">\n" +
+        "    <h4 class=\"panel-title\">\n" +
+        "      <a href class=\"accordion-toggle\" ng-click=\"toggleOpen()\" accordion-transclude=\"heading\"><span ng-class=\"{'text-muted': isDisabled}\">{{heading}}</span></a>\n" +
+        "    </h4>\n" +
+        "  </div>\n" +
+        "  <div class=\"panel-collapse\" collapse=\"!isOpen\">\n" +
+        "	  <div class=\"panel-body\" ng-transclude></div>\n" +
+        "  </div>\n" +
+        "</div>\n" +
+        "");
 }]);
 
-angular.module('template/accordion/accordion.html', []).run(['$templateCache', function($templateCache) {
-    $templateCache.put('template/accordion/accordion.html',
-        '<div class=\"panel-group\" ng-transclude></div>');
+angular.module("template/accordion/accordion.html", []).run(["$templateCache", function($templateCache) {
+    $templateCache.put("template/accordion/accordion.html",
+        "<div class=\"panel-group\" ng-transclude></div>");
 }]);
+
+
+
